@@ -2,7 +2,9 @@
   "name": "toga",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node --loader ts-node/esm src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,9 @@
   "homepage": "https://github.com/nimser/toga#readme",
   "description": "",
   "dependencies": {
+    "@langchain/community": "^0.3.45",
     "@langchain/core": "^0.3.57",
+    "@langchain/google-genai": "^0.2.10",
     "@types/node": "^22.15.24",
     "dotenv": "^16.5.0",
     "langchain": "^0.3.27",
