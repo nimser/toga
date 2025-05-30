@@ -1,0 +1,7 @@
+_ai/project_plan.md filter=git-crypt diff=git-crypt
+_ai/add_search_planning.md filter=git-crypt diff=git-crypt
+
+# Crucial Exclusions: These MUST NOT be encrypted
+.gitattributes !filter !diff
+.git-crypt/** !filter !diff
+.gitignore !filter !diff
