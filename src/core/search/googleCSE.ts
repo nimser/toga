@@ -1,6 +1,19 @@
 import { googleSearchTool } from './tools.js'
 import type { LangfuseTraceClient, LangfuseSpanClient } from 'langfuse'
 
+export function constructGoogleSearchQuery(
+  fieldOfInterest: string,
+  cityName: string
+): string {
+  if (!fieldOfInterest) {
+    throw new Error('Field of interest cannot be empty.')
+  }
+  if (!cityName) {
+    throw new Error('City name cannot be empty.')
+  }
+  return `"${fieldOfInterest}" events in "${cityName}"`
+}
+
 export async function fetchRawGoogleSearchResults(
   query: string,
   parentTrace?: LangfuseTraceClient | null
